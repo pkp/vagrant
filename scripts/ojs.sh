@@ -11,15 +11,15 @@ cd /var/www/html
 git clone https://github.com/pkp/ojs
 cd ojs
 ./tools/startSubmodulesTRAVIS.sh
-cp ojs/config.TEMPLATE.inc.php ojs/config.inc.php
+cp config.TEMPLATE.inc.php config.inc.php
+chown -R www-data:www-data .
+chmod -R ug+w .
 
-# Set permissions on the ojs directory. This command is
-# too permissive but that's OK for this VM.
-chown -R www-data:www-data ojs
-chmod -R ug+w ojs
+# Create a handy symlink from the home directory
+cd ~
+ln -s /var/www/html/ojs .
 
 # Create a files directory and set permissions on it
-cd /var/www
 mkdir files
 chown -R www-data:www-data files
 chmod -R ug+w files
