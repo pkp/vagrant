@@ -15,8 +15,13 @@ cp config.TEMPLATE.inc.php config.inc.php
 chown -R www-data:www-data .
 chmod -R ug+w .
 
+# Install Composer dependencies
+cd lib/pkp
+curl -sS https://getcomposer.org/installer | php
+php composer.phar update
+
 # Create a handy symlink from the home directory
-cd ~
+cd ~travis
 ln -s /var/www/html/ojs .
 
 # Create a files directory and set permissions on it
