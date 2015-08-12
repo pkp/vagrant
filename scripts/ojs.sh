@@ -9,19 +9,13 @@ echo "FLUSH PRIVILEGES" | mysql -uroot -pojs
 
 cd www
 
-# Prepare the FastCGI environment
-mkdir cgi-bin
-echo "#!/bin/sh
-export PHP_FCGI_CHILDREN=4
-export PHP_FCGI_MAX_REQUESTS=200
-exec /usr/bin/php5-cgi" > cgi-bin/php.fcgi
-chmod -R 755 cgi-bin
-
 # Clone the OJS repository
-git clone https://github.com/pkp/ojs ojs
-cd ojs
+git clone https://github.com/pkp/ojs .
 ./tools/startSubmodulesTRAVIS.sh
 cp config.TEMPLATE.inc.php config.inc.php
+mkdir ~/files
+chgrp -R www-data cache public ~/files config.inc.php
+chmod -R ug+w cache public ~/files config.inc.php
 
 # Install Composer dependencies
 cd lib/pkp
