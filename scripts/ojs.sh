@@ -22,7 +22,6 @@ git clone https://github.com/pkp/ojs ojs
 cd ojs
 ./tools/startSubmodulesTRAVIS.sh
 cp config.TEMPLATE.inc.php config.inc.php
-chmod -R ug+w cache public
 
 # Install Composer dependencies
 cd lib/pkp
@@ -30,5 +29,4 @@ curl -sS https://getcomposer.org/installer | php
 php composer.phar update
 
 # Create a files directory and set permissions on it
-ojs mkdir files
-chmod -R ug+w files
+mkdir files
