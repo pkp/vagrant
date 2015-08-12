@@ -21,12 +21,8 @@ When all the scripts have finished running, your virtual machine is ready for us
 
 ## Accessing OJS
 
-You can connect to OJS a web browser at [http://localhost:8000/ojs](http://localhost:8000/ojs). You will need to enter the required information on the installation page. Some things to watch for:
-
-* Under "File Settings," /var/www/files has been created for you. You don't need to change this setting.
-* Under "Database Settings," use 'localhost' for Host, and 'ojs' for Username, Password, and Database name. Uncheck "Create new database" (the database has been done for you).
-
-Once you have installed OJS, it is ready for use. The [OJS Documentation wiki](https://pkp.sfu.ca/wiki/index.php?title=OJS_Documentation) contains everything you need to know.
+Point your browser at [http://localhost:8000/ojs](http://localhost:8000/ojs). The [OJS Documentation wiki](https://pkp.sfu.ca/wiki/index.php?title=OJS_Documentation) contains everything you need to know, except...
+* The administrator account has username: admin password: admin
 
 ## Other details you might find useful
 
