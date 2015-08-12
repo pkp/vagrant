@@ -29,7 +29,7 @@ sed -i -e "s,#FastCgiWrapper /usr/lib/apache2/suexec,FastCgiWrapper /usr/lib/apa
 sed -i -e "s,/var/www/html,/home/ojs/www,g" /etc/apache2/sites-available/000-default.conf
 sed -i -e "s,/usr/lib/cgi-bin,/home/ojs/www/cgi-bin,g" /etc/apache2/sites-available/000-default.conf
 #sed -i -e "s,\${APACHE_LOG_DIR},/home/ojs/www,g" /etc/apache2/sites-available/000-default.conf
-sed -i -e "s,/var/www/html,/home/ojs/www/,g" /etc/apache2/suexec/ojs
+sed -i -e "s,/var/www/html,/home/ojs/www/,g" /etc/apache2/suexec/www-data
 
 # Install some additional PHP packages
 apt-get -y install php5-gd php5-dev php5-xsl php-soap php5-curl
