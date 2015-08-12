@@ -2,7 +2,7 @@ echo "Installing OJS"
 cd ~
 
 # Set up the OJS database
-echo "CREATE DATABASE ojs" | mysql -uroot -pojs
+echo "CREATE DATABASE ojs DEFAULT CHARSET utf8" | mysql -uroot -pojs
 echo "CREATE USER 'ojs'@'localhost' IDENTIFIED BY 'ojs'" | mysql -uroot -pojs
 echo "GRANT ALL ON ojs.* TO 'ojs'@'localhost'" | mysql -uroot -pojs
 echo "FLUSH PRIVILEGES" | mysql -uroot -pojs
