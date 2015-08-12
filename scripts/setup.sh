@@ -30,6 +30,7 @@ sed -i -e "s,/var/www/html,/home/ojs/www,g" /etc/apache2/sites-available/000-def
 sed -i -e "s,/usr/lib/cgi-bin,/home/ojs/www/cgi-bin,g" /etc/apache2/sites-available/000-default.conf
 #sed -i -e "s,\${APACHE_LOG_DIR},/home/ojs/www,g" /etc/apache2/sites-available/000-default.conf
 sed -i -e "s,/var/www/html,/home/ojs/www/,g" /etc/apache2/suexec/ojs
+sed -i -e "s,\*:80>,*:8000>,g" /etc/apache2/sites-available/000-default.conf
 
 # Install some additional PHP packages
 apt-get -y install php5-gd php5-dev php5-xsl php-soap php5-curl
