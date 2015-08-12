@@ -22,5 +22,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   shared_dir = "/vagrant"
 
   config.vm.provision :shell, path: "./scripts/setup.sh"
-  config.vm.provision :shell, path: "./scripts/ojs.sh"
 end
