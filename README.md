@@ -49,7 +49,7 @@ The virtual machine runs:
 - MySQL 5.5.41
 - Apache 2.26
 - PHP 5.5.9 
-- OJS 2.4.6
+- OJS master branch (3.x)
 
 ## Thanks
 
