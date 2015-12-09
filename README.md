@@ -22,7 +22,7 @@ When all the scripts have finished running, your virtual machine is ready for us
 ## Accessing OJS
 
 Point your browser at [http://localhost:8000/ojs](http://localhost:8000/ojs). The [OJS Documentation wiki](https://pkp.sfu.ca/wiki/index.php?title=OJS_Documentation) contains everything you need to know, except...
-* The administrator account has username: admin password: admin
+* The administrator account has username: admin password: ojsadmin
 
 ## Other details you might find useful
 
@@ -49,7 +49,7 @@ The virtual machine runs:
 - MySQL 5.5.41
 - Apache 2.26
 - PHP 5.5.9 
-- OJS master branch (3.x)
+- OJS 2.4.7.x
 
 ## Thanks
 
