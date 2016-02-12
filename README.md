@@ -13,8 +13,8 @@ Install the following prerequisites on your laptop or desktop:
 
 ## Setting up your virtual machine
 
-1. `git clone https://github.com/pkp/ojs-vagrant.git` (or download the .zip/.tar version)
-2. `cd ojs-vagrant`
+1. `git clone https://github.com/pkp/vagrant.git` (or download the .zip/.tar version)
+2. `cd vagrant`
 3. `vagrant up`
 
 When all the scripts have finished running, your virtual machine is ready for use.
@@ -40,16 +40,6 @@ OJS database details:
   - database: ojs
   - user: ojs
   - password: ojs
-
-## Environment
-
-The virtual machine runs:
-
-- Ubuntu 14.04
-- MySQL 5.5.41
-- Apache 2.26
-- PHP 5.5.9 
-- OJS master branch (3.x)
 
 ## Thanks
 
