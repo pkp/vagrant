@@ -13,8 +13,8 @@ Install the following prerequisites on your laptop or desktop:
 
 ## Setting up your virtual machine
 
-1. `git clone https://github.com/pkp/ojs-vagrant.git` (or download the .zip/.tar version)
-2. `cd ojs-vagrant`
+1. `git clone -b ojs-stable-2_4_8 https://github.com/pkp/vagrant.git` (or download the .zip/.tar version)
+2. `cd vagrant`
 3. `vagrant up`
 
 When all the scripts have finished running, your virtual machine is ready for use.

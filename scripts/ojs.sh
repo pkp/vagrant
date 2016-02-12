@@ -10,7 +10,7 @@ echo "FLUSH PRIVILEGES" | mysql -uroot -pojs
 cd www
 
 # Clone the OJS repository
-git clone -b ojs-stable-2_4_7 --single-branch https://github.com/pkp/ojs .
+git clone -b ojs-stable-2_4_8 --single-branch https://github.com/pkp/ojs .
 ./tools/startSubmodulesTRAVIS.sh
 cp config.TEMPLATE.inc.php config.inc.php
 mkdir ~/files
