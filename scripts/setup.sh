@@ -16,6 +16,10 @@ service apache2 restart
 adduser --gecos "" --disabled-password ojs
 usermod -a -G www-data ojs
 
+# Install a recent node/npm release (from https://www.rosehosting.com/blog/install-npm-on-ubuntu-16-04/)
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
 mkdir /var/www/html/ojs
 chown ojs:ojs /var/www/html/ojs
 ln -s /var/www/html/ojs /home/ojs/www
