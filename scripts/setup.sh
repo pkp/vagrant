@@ -3,13 +3,13 @@ apt-get -y update
 #apt-get -y upgrade
 
 # Install some useful stuff
-apt-get -y install openssh-server git vim wget curl
+apt-get -y install openssh-server git vim wget curl tasksel
 
 # Install LAMP server
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password ojs'
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password ojs'
 tasksel install lamp-server
-apt-get -y install php5-gd php5-xsl php5-curl
+apt-get -y install php-gd php7.0-xsl php-curl php-zip
 service apache2 restart
 
 # Create a user
