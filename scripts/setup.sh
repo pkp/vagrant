@@ -9,7 +9,7 @@ apt-get -y install openssh-server git vim wget curl tasksel
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password ojs'
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password ojs'
 tasksel install lamp-server
-apt-get -y install php-gd php7.0-xsl php-curl php-zip
+apt-get -y install php-gd php7.0-xsl php-curl php-zip php-mbstring
 service apache2 restart
 
 # Create a user
