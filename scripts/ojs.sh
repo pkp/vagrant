@@ -20,13 +20,13 @@ chmod -R ug+w cache public ~/files config.inc.php
 # Install Composer dependencies
 curl -sS https://getcomposer.org/installer | php
 cd lib/pkp
-php ../../composer.phar update
+php ../../composer.phar -q update
 cd ../..
 cd plugins/paymethod/paypal
-php ../../../composer.phar update
+php ../../../composer.phar -q update
 cd ../../..
 cd plugins/generic/citationStyleLanguage
-php ../../../composer.phar update
+php ../../../composer.phar -q update
 cd ../../..
 
 # Build the vue.js dependencies
