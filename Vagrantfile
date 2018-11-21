@@ -13,6 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network :forwarded_port, guest: 80, host: 8000 # Apache
   config.vm.network :forwarded_port, guest: 3306, host: 3307 # MySQL
+  config.vm.network :forwarded_port, guest: 5900, host: 5901 # X11VNC
 
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--memory", '3000']
@@ -21,5 +22,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   shared_dir = "/vagrant"
 
-  config.vm.provision :shell, path: "./scripts/setup.sh"
+  config.vm.provision :shell, path: "./scripts/setup.sh", privileged: false
 end
