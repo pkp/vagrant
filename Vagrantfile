@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "ubuntu/xenial64"
 
-  config.vm.network :forwarded_port, guest: 80, host: 8000 # Apache
+  config.vm.network :forwarded_port, guest: 80, host: 8000 # Web server
   config.vm.network :forwarded_port, guest: 3306, host: 3307 # MySQL
   config.vm.network :forwarded_port, guest: 5900, host: 5901 # X11VNC
 
