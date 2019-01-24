@@ -1,8 +1,17 @@
 ## Introduction
 
-A test/play virtual machine for [Open Journal Systems](http://pkp.sfu.ca/ojs/). It should work on any operating system that supports VirtualBox and Vagrant.
+A test/play virtual machine for [Open Journal Systems](http://pkp.sfu.ca/ojs/)
+and [Open Monograph Press](http://pkp.sfu.ca/omp). It should work on any
+operating system that supports VirtualBox and Vagrant.
 
 This virtual machine **should not** be used in production.
+
+## Configuration
+
+By default this image is configured to set up the `master` branch of OJS.
+You can choose OMP, or another branch, by editing the Vagrantfile and editing
+the `args` part of `vm.config.provision`. For example, use `omp stable-3_1_2`
+to test the OMP 3.1.2 stable branch.
 
 ## Prerequisites
 
