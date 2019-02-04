@@ -22,7 +22,7 @@ Install the following prerequisites on your laptop or desktop:
 
 ## Setting up your virtual machine
 
-1. `git clone -b ojs-master https://github.com/pkp/vagrant.git` (or download the .zip/.tar version)
+1. `git clone -b master https://github.com/pkp/vagrant.git` (or download the .zip/.tar version)
 2. `cd vagrant`
 3. `vagrant up`
 
