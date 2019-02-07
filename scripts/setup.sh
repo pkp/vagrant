@@ -38,6 +38,7 @@ echo "Building code dependencies..."
 ./lib/pkp/tools/travis/install-composer-dependencies.sh
 npm install && npm run build
 
+set +xe
+
 echo "Preparing and running tests..."
 source ./lib/pkp/tools/travis/prepare-tests.sh
-./lib/pkp/tools/travis/run-tests.sh
