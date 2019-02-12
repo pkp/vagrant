@@ -42,3 +42,4 @@ set +xe
 
 echo "Preparing and running tests..."
 source ./lib/pkp/tools/travis/prepare-tests.sh
+lib/pkp/tools/travis/run-tests.sh
