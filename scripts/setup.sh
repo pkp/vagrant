@@ -1,13 +1,12 @@
 set -xe
 
-APPLICATION=$1
-BRANCH=$2
+ACCOUNT=$1
+APPLICATION=$2
+BRANCH=$3
 
 export TEST=mysql
 
 echo "Installing packages..."
-sudo add-apt-repository ppa:jonathonf/firefox-esr-45
-
 sudo locale-gen en_US.UTF-8
 export LANG=en_US.UTF-8
 sudo add-apt-repository -y ppa:ondrej/php
@@ -15,16 +14,21 @@ sudo add-apt-repository -y ppa:ondrej/php
 sudo apt-get -y update
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password temp_root_password'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password temp_root_password'
-sudo apt-get -y install openssh-server git vim wget curl tasksel php socat xvfb x11-utils default-jre composer zip php-zip php-curl php-mbstring mysql-server x11vnc firefox-esr php-mysql php-xml
+sudo apt-get -y install openssh-server git vim wget curl tasksel php socat xvfb x11-utils default-jre zip php-zip php-curl php-mbstring mysql-server x11vnc php-mysql php-xml
 sudo apt-get purge -y apache2
 mysqladmin -u root -p'temp_root_password' password ''
+
+echo "Installing modern Composer..."
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+sudo php composer-setup.php --install-dir=/usr/bin --filename=composer
+rm composer-setup.php
 
 echo "Installing NodeJS toolset..."
 curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 echo "Installing source code..."
-git clone -b ${BRANCH} --single-branch https://github.com/pkp/${APPLICATION} ${APPLICATION}
+git clone -b ${BRANCH} --single-branch https://github.com/${ACCOUNT}/${APPLICATION} ${APPLICATION}
 cd ${APPLICATION}
 ./tools/startSubmodulesTRAVIS.sh
 
