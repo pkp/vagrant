@@ -13,7 +13,8 @@ You can choose OMP, or another branch, by editing the Vagrantfile and editing
 the `args` part of `vm.config.provision`. For example, use `omp stable-3_2_1`
 to test the OMP 3.2.1 stable branch.
 
-(This image currently supports OJS, OMP, and OPS 3.2.0 or newer.)
+(This image currently supports OJS, OMP, and OPS 3.2.0 or newer. Older versions
+may be supported by other branches of this repo, e.g. `stable-3_1_2`.)
 
 ## Prerequisites
 
