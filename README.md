@@ -8,7 +8,7 @@ This virtual machine **should not** be used in production.
 
 ## Configuration
 
-By default this image is configured to set up the `master` branch of OJS.
+By default this image is configured to set up the `stable-3_1_2` branch of OJS.
 You can choose OMP, or another branch, by editing the Vagrantfile and editing
 the `args` part of `vm.config.provision`. For example, use `omp stable-3_1_2`
 to test the OMP 3.1.2 stable branch.
