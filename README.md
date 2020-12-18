@@ -35,7 +35,7 @@ Note that this image runs the data build and test suite, so it may take quite a 
 
 ## Accessing OJS
 
-	Point your browser at [http://localhost:8000/ojs](http://localhost:8000/ojs). The [OJS Documentation Hub](https://docs.pkp.sfu.ca/) contains everything you need to know, except...
+	Point your browser at [http://localhost:8000](http://localhost:8000). The [OJS Documentation Hub](https://docs.pkp.sfu.ca/) contains everything you need to know, except...
 * The administrator account has username: `admin` password: `admin`
 * The journal manager/editor has username: `dbarnes` password: `dbarnesdbarnes`
 
